@@ -1,6 +1,6 @@
 
 .navbar-fixed-top{position:absolute}
-.jumbotron{background-image:url('/images/cover.png');background-attachment:fixed;background-position:center bottom;background-size:cover;position:relative;width:100%;height:725px;}
+.jumbotron{background-image:url('/img/Cover.png');background-attachment:fixed;background-position:center bottom;background-size:cover;position:relative;width:100%;height:725px;}
 .jumbotron .hero{background-attachment:fixed;margin:0 auto;padding:220px 0 220px;width:100%}
 .jumbotron .container{text-align:center}
 .jumbotron h1{font-family:'Open Sans',serif;font-size:80px;font-weight:700;color:#F0FFFF}
@@ -14,7 +14,9 @@
   padding-right: 15px;
   padding-left: 15px;
 }
-
+div#links{     /* this will hide div with class div_class_name */
+  display:none;
+}
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 20px;
@@ -137,6 +139,10 @@
     color:#FFFFFF
 
 }
+.thumb{
+    height: 75px;
+    width: 75px;
+}
 #about-text{
     font-size: 1.8em;
     letter-spacing:1px;  
@@ -144,7 +150,7 @@
     color:#FFFFFF
 }
 body{
-    background: url('/images/backg.png');
+    background: url('/img/backg.png');
     background-size: ;
     background-position: center center;
     background-repeat: repeat;
@@ -182,6 +188,17 @@ body{
     max-width:320px;
 }
 
+      ul {         
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+      ul li {     
+          list-style:none;
+          margin-bottom:25px;           
+      }
+      ul li img {
+          cursor: pointer;
+      }
 .dg-container{
   width: 100%;
   height: 450px;

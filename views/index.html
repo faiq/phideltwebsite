@@ -15,17 +15,8 @@
 
 <body>
 
-  <div id="blueimp-gallery" class="blueimp-gallery">
-      <div class="slides"></div>
-      <h3 class="title"></h3>
-      <a class="prev">‹</a>
-      <a class="next">›</a>
-      <a class="close">×</a>
-      <a class="play-pause"></a>
-      <ol class="indicator"></ol>
-  </div>
 
-  <div class="fixed" id="nav">
+<div class="fixed" id="nav">
     <ul>
       <li><a href="#">HOME</a></li>
       <li><a href="#about">ABOUT</a></li>
@@ -40,7 +31,7 @@
         <h1>Phi Delta Theta</h1>
         <p>New Jersey Alpha</p>
         <br>
-        <img src="images/down-bold.png">
+        <img src="img/down-bold.png">
       </div>
     </div>
   </div>
@@ -98,23 +89,54 @@
 </div>
   <div id="gallery">
      <div id="about-header" class="row"><h1 class="text-center">Gallery</h1></div>
-     <div id ="links" class="links"> 
-   <a href="http://farm4.static.flickr.com/3863/14870317518_1de7cab671_b.jpg" title="Roe Deer, Scotland" data-gallery=""><img src="http://farm4.static.flickr.com/3863/14870317518_1de7cab671_s.jpg"></a>
-<a href="http://farm4.static.flickr.com/3863/14870317518_1de7cab671_b.jpg" title="Roe Deer, Scotland" data-gallery=""><img src="http://farm4.static.flickr.com/3863/14870317518_1de7cab671_s.jpg"></a>
-<a href="http://farm4.static.flickr.com/3863/14870317518_1de7cab671_b.jpg" title="Roe Deer, Scotland" data-gallery=""><img src="http://farm4.static.flickr.com/3863/14870317518_1de7cab671_s.jpg"></a> 
-  
-    </div>
+    <br> 
+    <br>     
+<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div> 
+    <div id="links">
+    <a href="img/1.png">
+        <img src="img/1.png">
+    </a>
+    <a href="img/2.png">
+	<img src="img/2.png">
+    </a>
+    
+    <a href="img/3.png">
+        <img src="img/3.png">
+    </a>
+    <a href="img/4.png">
+        <img src="img/4.png">
+    </a>
+    <a href="img/5.png">
+        <img src="img/5.png">
+    </a>
+    <a href="img/6.png">
+        <img src="img/6.png">
+    </a>
+    <a href="img/7.png">
+        <img src="img/7.png">
+    </a>
+    <a href="img/8.png">
+        <img src="img/8.png">
+    </a>
+   </div>  
+</div>
 </div>
 <script src="javascripts/blueimp-gallery.min.js"></script>
 <script>
-document.getElementById('links').onclick = function (event) {
-    event = event || window.event;
-    var target = event.target || event.srcElement,
-        link = target.src ? target.parentNode : target,
-        options = {index: link, event: event},
-        links = this.getElementsByTagName('a');
-    blueimp.Gallery(links, options);
-};
+blueimp.Gallery(
+    document.getElementById('links').getElementsByTagName('a'),
+    {
+        container: '#blueimp-gallery-carousel',
+        carousel: true
+    }
+);
 </script>
 </body> 
 </html>
