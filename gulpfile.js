@@ -25,3 +25,5 @@ gulp.task('htmlpage', function() {
     .pipe(minifyHTML())
     .pipe(gulp.dest(htmlDst));
 });
+
+gulp.task('default', ['imagemin', 'htmlpage', 'scripts', 'styles'])
