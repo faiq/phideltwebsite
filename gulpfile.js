@@ -2,6 +2,7 @@
 var gulp = require('gulp'); 
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
+var concat = require('gulp-concat');
 
 gulp.task('imagemin', function() {
   var imgSrc = './public/img/**/*',
@@ -12,18 +13,16 @@ gulp.task('imagemin', function() {
     .pipe(imagemin())
     .pipe(gulp.dest(imgDst));
 });
-
-var minifyHTML = require('gulp-minify-html');
+var autoprefix = require('gulp-autoprefixer');
+var minifyCSS = require('gulp-minify-css');
  
-// minify new or changed HTML pages
-gulp.task('htmlpage', function() {
-  var htmlSrc = './views/*.html',
-      htmlDst = './views/build';
- 
-  gulp.src(htmlSrc)
-    .pipe(changed(htmlDst))
-    .pipe(minifyHTML())
-    .pipe(gulp.dest(htmlDst));
+// CSS concat, auto-prefix and minify
+gulp.task('styles', function() {
+  gulp.src(['./public/css/*.css'])
+    .pipe(concat('styles.css'))
+    .pipe(autoprefix('last 2 versions'))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./public/build/css/'));
 });
 
-gulp.task('default', ['imagemin', 'htmlpage', 'scripts', 'styles'])
+gulp.task('default', ['imagemin',  'styles'])
