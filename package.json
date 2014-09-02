@@ -10,6 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "connect-modrewrite": "^0.7.6",
+    "gulp": "^3.8.7",
+    "gulp-changed": "^1.0.0",
+    "gulp-imagemin": "^1.0.1",
+    "gulp-minify-html": "^0.1.4",
     "nodemon": "^1.2.0"
   },
   "dependencies": {
