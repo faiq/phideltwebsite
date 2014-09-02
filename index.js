@@ -5,10 +5,11 @@ var express = require('express')
   , server = http.createServer(app); 
 
 app.use(express.static(__dirname + '/public'));
-app.set('views', '/views'); 
+app.set('view engine', 'ejs');
+app.set('views', './views'); 
 
 app.get('/', function (req, res){
-  res.sendFile(__dirname + '/views/index.html')
+  res.render('index')
 })
 
 server.listen(3000);  

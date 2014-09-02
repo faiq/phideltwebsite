@@ -112,7 +112,7 @@ Armstrong was an aerospace engineer, naval aviator, test pilot, university profe
     <ol class="indicator"></ol>
 </div> 
     <div id="links">
-    <a href="build/images/1.png">
+    <!---<a href="build/images/1.png">
         <img src="build/images/1.png">
     </a>
     <a href="build/images/2.png">
@@ -132,14 +132,14 @@ Armstrong was an aerospace engineer, naval aviator, test pilot, university profe
         <img src="build/images/6.png">
     </a>
     <a href="build/images/7.png">
-        <img src="build/images/7.png">
-    </a>
-   <a href="http://tinypic.com?ref=eff02e" target="_blank"><img src="http://i61.tinypic.com/eff02e.jpg" border="0" alt=""></a> 
-   <a href="http://tinypic.com?ref=29bkf7k" target="_blank"><img src="http://i58.tinypic.com/29bkf7k.jpg" border="0" alt=""></a>
-   <a href="http://tinypic.com?ref=2w2gf14" target="_blank"><img src="http://i57.tinypic.com/2w2gf14.png" border="0" alt=""></a>
-   <a href="http://tinypic.com?ref=28jbonk" target="_blank"><img src="http://i57.tinypic.com/28jbonk.png" border="0" alt=""></a>
-  
-
+        <img src="build/images/7.png"></a> --->
+	<% for(var i=1; i<16; i++) { %>
+            <a href='build/images/<%=i%>.png'>
+           	<img src="build/images/<%=i%>.png">
+	    </a>
+       
+    <% } %>
+    
 	</div>  
 </div>
 <div id="calendar"> 
